@@ -38,10 +38,12 @@ all traffic to your localhost.
 
 After downloading ngrok create a temporary url on port 5000 using `ngrok http 5000` (or a similar command depending on your OS and where you saved the file)
 
-
+We now need to create a slash command endpoint and forward all events to a certain endpoint.
 
 We now need to tell Slack to send all events to your forwarding URL.
 
 Back in the Slack App console select the `Event Subscription` tab and click the enable events slider.
 
 Our app is listening for events at the `/event_endpoint` url, until you add more events this is only used for app verification.
+
+Under the `Slash Commands` tab, click the `Create New Command` button and add your `ngrokurl/lunch` entry.  More details [here](https://api.slack.com/slash-commands#what_are_commands)
